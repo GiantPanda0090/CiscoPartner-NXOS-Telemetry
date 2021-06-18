@@ -1,0 +1,39 @@
+version: '2.2'
+services:
+  telegraf_in:
+    #telegraf
+    image: telegraf
+    #--name=telegraf_in
+    container_name: telegraf_in
+    #-v $PWD/telegraf_in.conf:/etc/telegraf/telegraf.conf:ro -v $PWD/self_sign2048.pem:/etc/telegraf/self_sign2048.pem:ro
+    volumes:
+      - $PWD/conf/telegraf_in.conf:/etc/telegraf/telegraf.conf:ro
+      - $PWD/cert/self_sign2048.pem:/etc/telegraf/self_sign2048.pem:ro
+    #-p 50051:50051 -p 8092:8092 -p 8125:8125 -p 8094:8094
+    ports:
+      - 50051:50051
+      - 8092:8092
+      - 8125:8125
+      - 8094:8094
+    #--net = elk
+    networks:
+      - elasticsearch_elk
+
+  telegraf_out:
+    #telegraf
+    image: telegraf
+    #--name=telegraf_out
+    container_name: telegraf_out
+    #-v $PWD/telegraf_out.conf:/etc/telegraf/telegraf.conf:ro telegraf
+    volumes:
+      - $PWD/conf/telegraf_out.conf:/etc/telegraf/telegraf.conf:ro
+    #-p 50001:50001
+    ports:
+      - 50001:50001
+    #--net = elk
+    networks:
+      - elasticsearch_elk
+
+networks:
+  elasticsearch_elk:
+    external: true

@@ -1,0 +1,50 @@
+
+version: '2.2'
+services:
+  elasticsearch:
+    #docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.1
+    #--name elasticsearch
+    container_name: elasticsearch
+    #-e
+    environment:
+    #discovery.type=single-node
+      - discovery.type=single-node
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    #-p 9300:9300 -p 9200:9200
+    ports:
+      - 9300:9300
+      - 9200:9200
+    #--net = elk
+    networks:
+      - elk
+
+  #sudo docker run -d
+  kibana:
+    # docker.elastic.co/kibana/kibana:7.12.0
+    image: docker.elastic.co/kibana/kibana:7.12.0
+    # --name kibana
+    container_name: kibana
+    # -p 5601:5601
+    ports:
+      - 5601:5601
+    # --link elasticsearch:elasticsearch
+    links:
+      - "elasticsearch:elasticsearch"
+    # --net=elk
+    networks:
+      - elk
+
+
+volumes:
+  data01:
+    driver: local
+
+networks:
+  elk:
+    driver: bridge
