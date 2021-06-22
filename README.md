@@ -154,7 +154,7 @@ telemetry
 ```
 
 More Detail Regarding Dial Out can be found in Cisco Guide  
-<https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/7-x/programmability/guide/b_Cisco_Nexus_9000_Series_NX-OS_Programmability_Guide_7x/b_Cisco_Nexus_9000_Series_NX- OS_Programmability_Guide_7x_chapter_011000.html>
+<https://www.cisco.com/c/en/us/td/docs/switches/datacenter/nexus9000/sw/7-x/programmability/guide/b_Cisco_Nexus_9000_Series_NX-OS_Programmability_Guide_7x/b_Cisco_Nexus_9000_Series_NX-OS_Programmability_Guide_7x_chapter_011000.html>
 
 Other telegraf input plugin can be found via the link  
 <https://docs.influxdata.com/telegraf/v1.18/plugins/>
