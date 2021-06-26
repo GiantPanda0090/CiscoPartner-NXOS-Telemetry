@@ -65,7 +65,7 @@ index_name = "<Templet Name>" <<< The name that will be used ad index name in EL
 ```
 
 #### Dial In
-Modify “telegraf/conf/telegraf_in.conf” as the steps stated below
+Modify “telegraf/conf/telegraf_in.conf” as the steps stated below  
 (Madatory) Setup “inputs.gnmi” based on the following structure
 ```
 # ## Address and port of the gNMI GRPC server 
