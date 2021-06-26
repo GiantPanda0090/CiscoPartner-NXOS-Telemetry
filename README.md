@@ -90,7 +90,7 @@ sample_interval = "<interval in sec>”
 ```
 ##### Switch side config
 (Madatory) Download the OpenConfig SMU via the link  
-<https://devhub.cisco.com/artifactory/webapp/#/artifacts/browse/tree/Properties/open-nxos-agents/9.3-7/x86_64/mtx-openconfig-all-1.0.0.0-9.3.7.lib32_n9000.rpm>  
+<https://devhub.cisco.com/artifactory/open-nxos-agents/>  
 (Madatory) Install the SMU via command
 ```
 install add mtx-openconfig-all-1.0.0.182-9.3.5.lib32_n9000.rpm activate
