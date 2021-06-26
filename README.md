@@ -55,7 +55,7 @@ This section will introduce how to build the code.
 We will mark the one that is mandatory to review with (Mandatory) Tag and the one that can be used with default config via (Optional) Tag.
 
 #### Output Plugin - Elasticsearch
-Modify “telegraf/conf/telegraf_out.conf” as the steps stated below.
+Modify “telegraf/conf/telegraf_out.conf” as the steps stated below.  
 (Optional) Modify the following pararmeter in  “outputs.elasticsearch”
 ```
 urls = [ "http://elasticsearch:9200" ] # required. <<< Change this to elasticsearch. We are using Docker internal Network DNS here. 
