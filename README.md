@@ -1,5 +1,5 @@
 # CiscoPartner-NXOS-Telemetry
-Cisco Data Center Partner Training demo setup script for NXOS Telemetry Server
+Cisco Datacenter TAC Workshop for EMEAR - NXOS/ACI Automation demo setup script for NXOS Telemetry Server
 
 ## Project Structure
 ```
